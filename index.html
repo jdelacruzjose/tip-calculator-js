@@ -9,28 +9,36 @@
     <title>Tip-Calculator</title>
 </head>
     <body class="bg-dark">
-    <div >  
-        <div class="app mx-auto col-md-6 bg-success text-center">
+    <div>  
+        <div class="app mx-auto col-md-4 bg-success text-center">
             <h1 class="p-4 m-5">Tip Calculator</h1>
         </div>
-        <div class="muchCon mx-auto col-md-6">
-            <div class="input-group p-4 d-flex justify-content-center">
-            <div class="pre p-2">$</div>
-                <input type="number" class="col-md-4 text-center p-2" 
-                placeholder="How much was the bill?"/>
+        <div class="muchCon mx-auto col-md-4">
+            <div>
+                <div class="mx-auto col-md-8 moneySign">$</div>
+                <input type="number" min="0" class="cost service mx-auto text-center p-4 mb-4"
+                placeholder="How much was the bill?">
             </div>
-            <div class="mx-auto col-md-6 text-center p-4">
-                <select class="service" required>
+            <div class="service mx-auto text-center p-4 mb-4">
+                <select class="review mx-auto" required>
                 <option disabled selected>How was your service</option>
-                <option value="5">Amazing</option>
-                <option value="4">Great</option>
-                <option value="3">Good</option>
-                <option value="2">Alright</option>
-                <option value="1">Terrible</option>
+                <option value="22">5 - Amazing</option>
+                <option value="20">4 - Great</option>
+                <option value="18">3 - Good</option>
+                <option value="15">2 - Alright</option>
+                <option value="0">1 - Terrible</option>
                 </select>
             </div>
-            <input type="number" class="people mx-auto col-md-6 text-center p-2" placeholder="How many people are sharing the bill">
+            <input type="number"  min="0"
+            class="people service mx-auto text-center p-4 mb-4" 
+            placeholder="How many people are sharing the bill?">
+            <div class="mx-auto col-md-6 text-center pb-4">
+                <button type="submit" class="tipBut btn btn-success pl-4 pr-4">Tip</button>
+            </div>
+            <div class="theeTip" p-4>
+                <p class="mx-auto col-md-8 text-center">You Should Tip:</p>
+                <h3 class="tipSec mx-auto col-md-6 text-center pb-4">$0</h3>
+            </div>
         </div>
-    </div> 
     </body>
 </html>
